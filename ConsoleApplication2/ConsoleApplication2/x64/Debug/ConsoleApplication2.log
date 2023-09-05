@@ -1,0 +1,3 @@
+﻿  ConsoleApplication2.c
+D:\ПИбд-13\1 Семестр\Основы алгоритмизации и программирование Власенко Олег Федосович\Программы\ConsoleApplication2\ConsoleApplication2\ConsoleApplication2.c(9,9): warning C4566: символ, представленный универсальным именем символа "\u028C", невозможно представить в текущей кодовой странице (1251)
+  ConsoleApplication2.vcxproj -> D:\ПИбд-13\1 Семестр\Основы алгоритмизации и программирование Власенко Олег Федосович\Программы\ConsoleApplication2\x64\Debug\ConsoleApplication2.exe
