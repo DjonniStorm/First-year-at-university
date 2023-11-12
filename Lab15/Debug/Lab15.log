@@ -1,0 +1,23 @@
+﻿  Images_Lab15.cpp
+  Lab15.cpp
+  Lab15_1.cpp
+  Создание кода...
+Lab15_1.obj : error LNK2005: "int __stdcall About(struct HWND__ *,unsigned int,unsigned int,long)" (?About@@YGHPAUHWND__@@IIJ@Z) уже определен в Lab15.obj
+Lab15_1.obj : error LNK2005: "int __cdecl InitInstance(struct HINSTANCE__ *,int)" (?InitInstance@@YAHPAUHINSTANCE__@@H@Z) уже определен в Lab15.obj
+Lab15_1.obj : error LNK2005: "unsigned short __cdecl MyRegisterClass(struct HINSTANCE__ *)" (?MyRegisterClass@@YAGPAUHINSTANCE__@@@Z) уже определен в Lab15.obj
+Lab15_1.obj : error LNK2005: "long __stdcall WndProc(struct HWND__ *,unsigned int,unsigned int,long)" (?WndProc@@YGJPAUHWND__@@IIJ@Z) уже определен в Lab15.obj
+Lab15_1.obj : error LNK2005: _wWinMain@16 уже определен в Lab15.obj
+Lab15_1.obj : error LNK2005: "int image_x" (?image_x@@3HA) уже определен в Lab15.obj
+Lab15_1.obj : error LNK2005: "int image_y" (?image_y@@3HA) уже определен в Lab15.obj
+Lab15_1.obj : error LNK2005: "int model" (?model@@3HA) уже определен в Lab15.obj
+Lab15_1.obj : error LNK2005: "int image_n" (?image_n@@3HA) уже определен в Lab15.obj
+Lab15_1.obj : error LNK2005: "int image_m" (?image_m@@3HA) уже определен в Lab15.obj
+Lab15_1.obj : error LNK2005: "unsigned char r" (?r@@3EA) уже определен в Lab15.obj
+Lab15_1.obj : error LNK2005: "unsigned char g" (?g@@3EA) уже определен в Lab15.obj
+Lab15_1.obj : error LNK2005: "unsigned char b" (?b@@3EA) уже определен в Lab15.obj
+Lab15_1.obj : error LNK2005: "struct HINSTANCE__ * hInst" (?hInst@@3PAUHINSTANCE__@@A) уже определен в Lab15.obj
+Lab15_1.obj : error LNK2005: "wchar_t * szTitle" (?szTitle@@3PA_WA) уже определен в Lab15.obj
+Lab15_1.obj : error LNK2005: "wchar_t * szWindowClass" (?szWindowClass@@3PA_WA) уже определен в Lab15.obj
+Lab15_1.obj : error LNK2005: "struct Image im1" (?im1@@3UImage@@A) уже определен в Lab15.obj
+Lab15_1.obj : error LNK2005: "struct Image2 im2" (?im2@@3UImage2@@A) уже определен в Lab15.obj
+D:\програмки\Debug\Lab15.exe : fatal error LNK1169: обнаружен многократно определенный символ - один или более
