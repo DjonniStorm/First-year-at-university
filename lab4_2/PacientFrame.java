@@ -1,6 +1,5 @@
 import javax.swing.*;
-import java.awt.GridLayout;
-import java.awt.ScrollPane;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
@@ -32,19 +31,25 @@ public class PacientFrame extends JFrame {
         rightBlock.setLayout(iMoreLikeFlexbox);
         mainPanel.setLayout(new GridLayout(1, 2));
 
+        JLabel name     = new JLabel("Имя:", SwingConstants.CENTER);
+        JLabel surname  = new JLabel("Фамилия:", SwingConstants.CENTER);
+        JLabel yearOfB  = new JLabel("Год рождения:", SwingConstants.CENTER);
         mainPanel.add(leftBlock);
         mainPanel.add(rightBlock);
+        leftBlock.add(name);
         leftBlock.add(nameField);
+        leftBlock.add(surname);
         leftBlock.add(surnameField);
+        leftBlock.add(yearOfB);
         leftBlock.add(yearOfBirthField);
         leftBlock.add(buttonAdd);
         leftBlock.add(buttonDel);
 
-
         defaultListModel = new DefaultListModel<>();
         list = new JList<>(defaultListModel);
-        rightBlock.add(list);
-        rightBlock.add(new ScrollPane(1));
+        JScrollPane pane = new JScrollPane();
+        pane.setViewportView(list);
+        rightBlock.add(pane);
 
         JButton buttonFilter        = new JButton("Фильтр");
         JButton buttonClearFilter   = new JButton("Очистить фильтр");
@@ -57,22 +62,30 @@ public class PacientFrame extends JFrame {
         buttonAdd.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                listP.patientData.add(new Pacient(Integer.parseInt(yearOfBirthField.getText()), nameField.getText(), surnameField.getText()));
-                defaultListModel.clear();
-                Object[] a = listP.to_String();
-                for (int i = 0; i < a.length; i++) {
-                    defaultListModel.addElement(a[i]);
+                try {
+                    listP.patientData.add(new Pacient(Integer.parseInt(yearOfBirthField.getText()), nameField.getText(), surnameField.getText()));
+                    defaultListModel.clear();
+                    Object[] a = listP.to_String();
+                    for (int i = 0; i < a.length; i++) {
+                        defaultListModel.addElement(a[i]);
+                    }
+                } catch (Exception ex) {
+                    JOptionPane.showMessageDialog(null, "Неправильные данные ");
                 }
             }
         });
         buttonDel.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                listP.patientData.remove(list.getSelectedValue());
-                defaultListModel.clear();
-                Object[] a = listP.to_String();
-                for (int i = 0; i < a.length; i++) {
-                    defaultListModel.addElement(a[i]);
+                if (list.getSelectedValue() == null) {
+                    JOptionPane.showMessageDialog(null, "Данные не выбраны ");
+                } else {
+                    listP.patientData.remove(list.getSelectedValue());
+                    defaultListModel.clear();
+                    Object[] a = listP.to_String();
+                    for (int i = 0; i < a.length; i++) {
+                        defaultListModel.addElement(a[i]);
+                    }
                 }
             }
         });
